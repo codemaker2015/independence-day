@@ -223,15 +223,23 @@
         setTimeout(f, 20);
       }
       else {
-	setTimeout(() => {
-        $(".loader").hide(0);
-        $(".flag").hide(0);
-        // $(".LoadText>span").html("Happy Independence day"); 
-        $(".LoadText").width($(".LoadText>span").width());
-        $(".LoadText").css("margin-top", "100px");
-        $(".LoadText>span").css("color", "#FFF"); 
-        $("body").css("background", "url('https://github.com/codemaker2015/independence-day/raw/master/bg.jpg')").delay(1000);
-        $("body").css("background-size", "cover");
+	      setTimeout(() => {
+          $(".loader").hide(0);
+          $(".flag").hide(0);
+          // $(".LoadText>span").html("Happy Independence day"); 
+          $(".LoadText").width($(".LoadText>span").width());
+          $(".LoadText").css("margin-top", "100px");
+          $(".LoadText>span").css("color", "#FFF"); 
+          $("body").css("background", "url('https://github.com/codemaker2015/independence-day/raw/master/bg.jpg')").delay(1000);
+          $("body").css("background-size", "cover");
+          // $("body").css("background-repeat", "no-repeat");
+          if (navigator.userAgentData.mobile === 'true') {
+            //code for mobile
+            $("body").css("background", "url('https://github.com/codemaker2015/independence-day/raw/master/bg2.jpg')").delay(1000);
+          }else {
+            //code for PCs & laptops
+            $("body").css("background", "url('https://github.com/codemaker2015/independence-day/raw/master/bg.jpg')").delay(1000);
+          }
         }, 500);
       }
     }
