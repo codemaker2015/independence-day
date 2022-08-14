@@ -212,8 +212,8 @@
       colortext = wid % 3;
       $(".LoadText>span").html(widpercent).css("color", color[colortext]);
       wid = wid + Math.floor(Math.random() * 10);
-      if (wid <= 100) {
-        setTimeout(f, 70);
+      if (wid <= 75) {
+        setTimeout(f, 100);
       }
       else {
         $(".loader").hide(600);
